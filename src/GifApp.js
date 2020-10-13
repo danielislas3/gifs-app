@@ -8,7 +8,7 @@ export const GifApp = () => {
 
   return (
     <>
-      <h2>GifApp</h2>
+      <h1 >GifApp</h1>
       <AddCategory setCategories={setcategories} />
       <hr />
 
