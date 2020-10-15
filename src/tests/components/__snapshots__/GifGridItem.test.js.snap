@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifGridItem></GifGridItem> Debe mostrar el copmponenete correctamnte 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt="Un titulo"
+    src="http//"
+  />
+  <p>
+    Un titulo
+  </p>
+</div>
+`;
