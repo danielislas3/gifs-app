@@ -4,6 +4,7 @@ exports[`pruebas en <AddCategory/> debe de mostrarse correctamente 1`] = `
 <form
   onSubmit={[Function]}
 >
+  <p />
   <h2>
     Add Category
   </h2>
