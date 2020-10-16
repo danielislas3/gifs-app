@@ -1,15 +1,14 @@
-import "@testing-library/jest-dom";
-import React from "react";
-import { shallow } from "enzyme";
-import { GifGrid } from "../../components/GifGrid";
-import { useFetchGifs } from "../../hooks/useFetchGifs";
-jest.mock("../../hooks/useFetchGifs");
+import '@testing-library/jest-dom';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { GifGrid } from '../../components/GifGrid';
+import { useFetchGifs } from '../../hooks/useFetchGifs';
+jest.mock('../../hooks/useFetchGifs');
 
-describe("Pruebas en <GifGrid/>", () => {
+describe('Pruebas en <GifGrid/>', () => {
+  const category = 'Pepe';
 
-  const category = "Pepe";
-  
-  test("Debe mostrar el copmponenete ", () => {
+  test('Debe mostrar el copmponenete ', () => {
     useFetchGifs.mockReturnValue({
       data: [],
       loading: true,
@@ -19,13 +18,14 @@ describe("Pruebas en <GifGrid/>", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  test("debe de mostrar items cuando se cargan imagenes", () => {
-
-    const gifs=[{
-      id:'abc',
-      url:'https://giphy.com/embed/HdVtsppIpBigM',
-      title:'gift1'
-    }]
+  test('debe de mostrar items cuando se cargan imagenes', () => {
+    const gifs = [
+      {
+        id: 'abc',
+        url: 'https://giphy.com/embed/HdVtsppIpBigM',
+        title: 'gift1',
+      },
+    ];
 
     useFetchGifs.mockReturnValue({
       data: gifs,
@@ -33,11 +33,9 @@ describe("Pruebas en <GifGrid/>", () => {
     });
 
     const wrapper = shallow(<GifGrid category={category} />);
-    
+
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.find('p').exists()).toBe(false);
-    expect(wrapper.find('GifGridItem').length).toBe(gifs.length)
-
-
+    expect(wrapper.find('GifGridItem').length).toBe(gifs.length);
   });
 });
