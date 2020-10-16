@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifGrid/> Debe mostrar el copmponenete  1`] = `
+<Fragment>
+  <h3>
+    Pepe
+  </h3>
+  <p>
+    Loading...
+  </p>
+  <div
+    className="card-grid animate__animated animate__fadeIn"
+  />
+</Fragment>
+`;
+
+exports[`Pruebas en <GifGrid/> debe de mostrar items cuando se cargan imagenes 1`] = `
+<Fragment>
+  <h3>
+    Pepe
+  </h3>
+  <div
+    className="card-grid animate__animated animate__fadeIn"
+  >
+    <GifGridItem
+      id="abc"
+      key="abc"
+      title="gift1"
+      url="https://giphy.com/embed/HdVtsppIpBigM"
+    />
+  </div>
+</Fragment>
+`;
